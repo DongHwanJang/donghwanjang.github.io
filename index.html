@@ -20,7 +20,7 @@
               <p style="text-align:center">
                 <name>Dong-Hwan Jang</name>
               </p>
-              <p>I am a master's student at <a href="https://en.wikipedia.org/wiki/Seoul_National_University">Seoul National University</a>, Electrical and Computer Science Department, advised by <a href="https://cv.snu.ac.kr/index.php/~bhhan/">Bohyung Han</a>. I am currently at <a href="https://www.cmu.edu/">CMU as a visiting scholar, fully funded by Korea Government.
+              <p>I am a master's student at <a href="https://en.wikipedia.org/wiki/Seoul_National_University">Seoul National University</a>, Electrical and Computer Science Department, advised by <a href="https://cv.snu.ac.kr/index.php/~bhhan/">Bohyung Han</a>. I am currently at <a href="https://www.cmu.edu/">CMU</a> as a visiting scholar, fully funded by Korea Government.
                 I completed my Bachelors degree with Electrical\&Computer Engineering and Technology Management from Seoul National University in 2020.
 <!--                I work on computer vision and machine learning. Especially, I am interested in <b>dynamic neural network</b> for robust and efficient operations. As human brain perceives, I believe dynamic operations based on modularity and compositionality could be the next key for dynamically adapting and evolving machine.-->
               </p>
@@ -37,7 +37,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/casual_jdh_photo.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/casual_jdh_photo.jpg" class="hoverZoomLink"></a>
+              <a href="images/jdh_hanriver.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/circular_jdh_hanriver.png" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -58,87 +58,78 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-          <tr onmouseout="mira_stop()" onmouseover="mira_start()">
+          <tr onmouseout="dynopool_stop()" onmouseover="dynopool_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='mira_image'>
-                  <img src='images/mira_after.jpg' width="160"></div>
-                <img src='images/mira_before.jpg' width="160">
+                <div class="two" id='dynopool_image'>
+                  <img src='images/dynopool_after.jpg' width="160"></div>
+                <img src='images/dynopool_before.jpg' width="160">
               </div>
               <script type="text/javascript">
-                function mira_start() {
-                  document.getElementById('mira_image').style.opacity = "1";
+                function dynopool_start() {
+                  document.getElementById('dynopool_image').style.opacity = "1";
                 }
 
-                function mira_stop() {
-                  document.getElementById('mira_image').style.opacity = "0";
+                function dynopool_stop() {
+                  document.getElementById('dynopool_image').style.opacity = "0";
                 }
-                mira_stop()
+                dynopool_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://openreview.net/forum?id=AmPeAFzU3a4">
-                <papertitle>MIRA: Mental Imagery for Robotic Affordances</papertitle>
+              <a href="https://arxiv.org/pdf/2205.15254.pdf">
+                <papertitle>Pooling Revisited: Your Receptive Field is Suboptimal</papertitle>
               </a>
               <br>
-              <a href="https://yenchenlin.me/">Lin Yen-Chen</a>,
-              <a href="http://www.peteflorence.com/">Pete Florence</a>,
-              <a href="https://andyzeng.github.io/">Andy Zeng</a>, <strong>Jonathan T. Barron</strong>,
-              <a href="https://yilundu.github.io/">Yilun Du</a>,
-              <a href="https://people.csail.mit.edu/weichium/">Wei-Chiu Ma</a>,
-              <a href="https://anthonysimeonov.github.io/">Anthony Simeonov</a>,
-              <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>,
-              <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>
+              <strong>Dong-Hwan Jang</strong>,
+              Sanghyeok Chu,
+              Joonhyuk Kim,
+              <a href="https://cv.snu.ac.kr/index.php/~bhhan/">Bohyung Han</a>
               <br>
-              <em>CoRL</em>, 2022
+              <em>CVPR</em>, 2022
               <p></p>
               <p>
-                NeRF lets us synthesize novel orthographic views that work well with pixel-wise algorithms for robotic manipulation.
+                We propose DynOPool, a learnable resizing module that finds the optimal scale factors and receptive fields of intermediate feature maps.
               </p>
             </td>
           </tr>
 
 
-          <tr onmouseout="dreamfusion_stop()" onmouseover="dreamfusion_start()"  bgcolor="#ffffd0">
+          <tr onmouseout="ds4c_stop()" onmouseover="ds4c_start()"  bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='dreamfusion_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/dreamfusion.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/dreamfusion.jpg' width="160">
+                <div class="two" id='ds4c_image'>
+                  <img src='images/ds4c_after.jpg' width="160"></div>
+                <img src='images/ds4c_before.jpg' width="160">
               </div>
               <script type="text/javascript">
-                function dreamfusion_start() {
-                  document.getElementById('dreamfusion_image').style.opacity = "1";
+                function ds4c_start() {
+                  document.getElementById('ds4c_image').style.opacity = "1";
                 }
 
-                function dreamfusion_stop() {
-                  document.getElementById('dreamfusion_image').style.opacity = "0";
+                function ds4c_stop() {
+                  document.getElementById('ds4c_image').style.opacity = "0";
                 }
                 dreamfusion_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://dreamfusion3d.github.io/">
-                <papertitle>DreamFusion: Text-to-3D using 2D Diffusion</papertitle>
-              </a>
+              <papertitle>DS4C patient policy province dataset: a comprehensive COVID-19 dataset for causal and epidemiological analysis</papertitle>
               <br>
-              <a href="https://cs.stanford.edu/~poole/">Ben Poole</a>,
-              <a href="https://www.ajayj.com/">Ajay Jain</a>,
-              <strong>Jonathan T. Barron</strong>,
-							<a href="https://bmild.github.io/">Ben Mildenhall</a>
+              <a href="https://www.linkedin.com/in/jimi-kim/">Jimi Kim*</a>,
+              Seojin Jang*,
+              <a href="https://www.linkedin.com/in/joong-kun-lee-0a2477b6/">Joong Kun Lee*</a>,
+              <strong>Dong-Hwan Jang*</strong> (* indicates equal contributions)
               <br>
-              <em>arXiv</em>, 2022
+              <em>NeurIPS Workshop</em>, 2020
               <br>
-              <a href="https://dreamfusion3d.github.io/">project page</a>
+              <a href="https://www.kaggle.com/kimjihoo/coronavirusdataset">project page</a>
               /
-              <a href="https://arxiv.org/abs/2209.14988">arXiv</a>
-              /
-              <a href="https://dreamfusion3d.github.io/gallery.html">gallery</a>
+              <a href="http://www.aitimes.com/news/articleView.html?idxno=136249">article (korean)</a>
+              <a href="https://papago.naver.net/website?locale=en&source=ko&target=en&url=http%3A%2F%2Fwww.aitimes.com%2Fnews%2FarticleView.html%3Fidxno%3D136249"> (auto-translated)</a>
               <p></p>
               <p>
-              We optimize a NeRF from scratch using a pretrained text-to-image diffusion model to do text-to-3D generative modeling.
+              We present DS4C South Korea Patient, Policy, and Provincial data (DS4C-PPP dataset). The dataset contains comprehensive data that could be used for causal analysis, such as per-patient symptom onset and confirmed date, travel frequency, hospital accessibility, and 61 preventative policies enacted in South Korea.
               </p>
             </td>
           </tr></table>
@@ -155,192 +146,149 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-          <tr onmouseout="mira_stop()" onmouseover="mira_start()">
+          <tr onmouseout="diff_stop()" onmouseover="diff_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='mira_image'>
-                  <img src='images/mira_after.jpg' width="160"></div>
-                <img src='images/mira_before.jpg' width="160">
+                <div class="two" id='diff_image'>
+                  <img src='images/diff_after.jpg' width="160"></div>
+                <img src='images/diff_before.jpg' width="160">
               </div>
               <script type="text/javascript">
-                function mira_start() {
-                  document.getElementById('mira_image').style.opacity = "1";
+                function diff_start() {
+                  document.getElementById('diff_image').style.opacity = "1";
                 }
 
-                function mira_stop() {
-                  document.getElementById('mira_image').style.opacity = "0";
+                function diff_stop() {
+                  document.getElementById('diff_image').style.opacity = "0";
                 }
-                mira_stop()
+                diff_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://openreview.net/forum?id=AmPeAFzU3a4">
-                <papertitle>MIRA: Mental Imagery for Robotic Affordances</papertitle>
+                <papertitle>DIFF: Deblurring Implicit Feature Function</papertitle>
               </a>
               <br>
-              <a href="https://yenchenlin.me/">Lin Yen-Chen</a>,
-              <a href="http://www.peteflorence.com/">Pete Florence</a>,
-              <a href="https://andyzeng.github.io/">Andy Zeng</a>, <strong>Jonathan T. Barron</strong>,
-              <a href="https://yilundu.github.io/">Yilun Du</a>,
-              <a href="https://people.csail.mit.edu/weichium/">Wei-Chiu Ma</a>,
-              <a href="https://anthonysimeonov.github.io/">Anthony Simeonov</a>,
-              <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>,
-              <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>
-              <br>
-              <em>CoRL</em>, 2022
               <p></p>
               <p>
-                NeRF lets us synthesize novel orthographic views that work well with pixel-wise algorithms for robotic manipulation.
+                Spatially-Variant Motion Deblur based on the Implicit Neural Representation
+              </p>
+              <p>
+                U.S. Patent Application Number: 17/973,809 (in progress)
               </p>
             </td>
           </tr>
 
 
-          <tr onmouseout="dreamfusion_stop()" onmouseover="dreamfusion_start()"  bgcolor="#ffffd0">
+          <tr onmouseout="depthfinder_stop()" onmouseover="depthfinder_start()"  bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
-                <div class="two" id='dreamfusion_image'><video  width=100% height=100% muted autoplay loop>
-                <source src="images/dreamfusion.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-                </video></div>
-                <img src='images/dreamfusion.jpg' width="160">
+                <div class="two" id='depthfinder_image'>
+                  <img src='images/depthfinder_after.jpg' width="160"></div>
+                <img src='images/depthfinder_before.jpg' width="160">
               </div>
               <script type="text/javascript">
-                function dreamfusion_start() {
-                  document.getElementById('dreamfusion_image').style.opacity = "1";
+                function depthfinder_start() {
+                  document.getElementById('depthfinder_image').style.opacity = "1";
                 }
 
-                function dreamfusion_stop() {
-                  document.getElementById('dreamfusion_image').style.opacity = "0";
+                function depthfinder_stop() {
+                  document.getElementById('depthfinder_image').style.opacity = "0";
                 }
-                dreamfusion_stop()
+                depthfinder_stop()
               </script>
             </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="https://dreamfusion3d.github.io/">
-                <papertitle>DreamFusion: Text-to-3D using 2D Diffusion</papertitle>
+                <papertitle>DepthFinder: Universal Image Restoration based on Adaptive Inference</papertitle>
               </a>
               <br>
-              <a href="https://cs.stanford.edu/~poole/">Ben Poole</a>,
-              <a href="https://www.ajayj.com/">Ajay Jain</a>,
-              <strong>Jonathan T. Barron</strong>,
-							<a href="https://bmild.github.io/">Ben Mildenhall</a>
-              <br>
-              <em>arXiv</em>, 2022
-              <br>
-              <a href="https://dreamfusion3d.github.io/">project page</a>
-              /
-              <a href="https://arxiv.org/abs/2209.14988">arXiv</a>
-              /
-              <a href="https://dreamfusion3d.github.io/gallery.html">gallery</a>
-              <p></p>
               <p>
-              We optimize a NeRF from scratch using a pretrained text-to-image diffusion model to do text-to-3D generative modeling.
+              We adaptively find the appropriate number of the residual blocks according to the severity and distortion type of the input in universal image restoration task.
               </p>
             </td>
           </tr></table>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
-          <tr>
-            <td>
-              <heading>Personal Project</heading>
-            </td>
-          </tr>
-        </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-          <tr onmouseout="mira_stop()" onmouseover="mira_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='mira_image'>
-                  <img src='images/mira_after.jpg' width="160"></div>
-                <img src='images/mira_before.jpg' width="160">
-              </div>
-              <script type="text/javascript">
-                function mira_start() {
-                  document.getElementById('mira_image').style.opacity = "1";
-                }
 
-                function mira_stop() {
-                  document.getElementById('mira_image').style.opacity = "0";
-                }
-                mira_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-              <a href="https://openreview.net/forum?id=AmPeAFzU3a4">
-                <papertitle>MIRA: Mental Imagery for Robotic Affordances</papertitle>
-              </a>
-              <br>
-              <a href="https://yenchenlin.me/">Lin Yen-Chen</a>,
-              <a href="http://www.peteflorence.com/">Pete Florence</a>,
-              <a href="https://andyzeng.github.io/">Andy Zeng</a>, <strong>Jonathan T. Barron</strong>,
-              <a href="https://yilundu.github.io/">Yilun Du</a>,
-              <a href="https://people.csail.mit.edu/weichium/">Wei-Chiu Ma</a>,
-              <a href="https://anthonysimeonov.github.io/">Anthony Simeonov</a>,
-              <a href="https://meche.mit.edu/people/faculty/ALBERTOR@MIT.EDU">Alberto Rodriguez</a>,
-              <a href="http://web.mit.edu/phillipi/">Phillip Isola</a>
-              <br>
-              <em>CoRL</em>, 2022
-              <p></p>
-              <p>
-                NeRF lets us synthesize novel orthographic views that work well with pixel-wise algorithms for robotic manipulation.
-              </p>
-            </td>
-          </tr></table>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
           <tr>
             <td>
-              <heading>Misc</heading>
+              <heading>Talks</heading>
             </td>
           </tr>
         </tbody></table>
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
 
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/cvf.jpg"></td>
+            <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/kccv.jpg"></td>
             <td width="75%" valign="center">
-              <a href="https://cvpr2022.thecvf.com/area-chairs">Area Chair, CVPR 2022</a>
+              <a href="http://kccv2022.kcvs.kr/#top">Korean Conference on Computer Vision 2022</a>
               <br>
-              <a href="http://cvpr2021.thecvf.com/area-chairs">Area Chair & Longuet-Higgins Award Committee Member, CVPR 2021</a>
+              - 20 minutes oral presentation (top 23.5% among published papers) on CVPR paper “Pooling Revisited: Your Receptive
+Field is Suboptimal” presented by prof. Bohyung Han
               <br>
-              <a href="http://cvpr2019.thecvf.com/area_chairs">Area Chair, CVPR 2019</a>
               <br>
-              <a href="http://cvpr2018.thecvf.com/organizers/area_chairs">Area Chair, CVPR 2018</a>
             </td>
           </tr>
           <tr>
             <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src="images/cs188.jpg" alt="cs188">
+              <img src="images/ds4c.jpg" alt="ds4c">
             </td>
             <td width="75%" valign="center">
-              <a href="http://inst.eecs.berkeley.edu/~cs188/sp11/announcements.html">Graduate Student Instructor, CS188 Spring 2011</a>
+              <a href="https://www.youtube.com/watch?v=pVrbEGMo3_g">Databricks Invited Talk</a>
               <br>
-              <a href="http://inst.eecs.berkeley.edu/~cs188/fa10/announcements.html">Graduate Student Instructor, CS188 Fall 2010</a>
-              <br>
-              <a href="http://aima.cs.berkeley.edu/">Figures, "Artificial Intelligence: A Modern Approach", 3rd Edition</a>
+              - 1 hour talk on “The Complexities around COVID-19 Data” invited as DS4C team
+                <br>
             </td>
           </tr>
-
-
-          <tr>
-            <td align="center" style="padding:20px;width:25%;vertical-align:middle">
-							<heading>Basically <br> Blog Posts</heading>
-            </td>
-            <td width="75%" valign="middle">
-              <a href="https://arxiv.org/abs/2112.11687">Squareplus: A Softplus-Like Algebraic Rectifier</a>
-              <br>
-              <a href="https://arxiv.org/abs/2010.09714">A Convenient Generalization of Schlick's Bias and Gain Functions</a>
-              <br>
-              <a href="https://arxiv.org/abs/1704.07483">Continuously Differentiable Exponential Linear Units</a>
-            </td>
-          </tr>
-
-
         </tbody></table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Scholarships \& Award</heading>
+              Korean Government Scholarship for Overseas Study (2023-2024)
+              <br>
+              - Covers USD 40,000 support per year. Only 64 students are selected in all fields in Korea.
+
+              <br>
+              <br>
+              OnDream Global Scholarship Award (2022)
+                <br>
+              - Award Prize - around USD 2,350
+               <br>
+              - For the paper “Pooling Revisited: Your Receptive Field is Suboptimal” at CVPR 2022
+               <br>
+               <br>
+              OnDream Future Technology Scholarship (2021-2022)
+              <br>
+              - Covers full tuition & financial support
+
+
+            </td>
+          </tr>
+        </tbody></table>
+
+        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20"><tbody>
+          <tr>
+            <td>
+              <heading>Teaching Experiences</heading>
+              <br>
+              • Teaching Assistant for 430.329: Introduction to Algorithms at Seoul National University (Fall 2020)
+              <br>
+              • Teaching Assistant for Samsung AI Expert Course at Seoul National University (July 2019)
+              <br>
+              • Teaching Assistant for Hyundai Motors AI Expert Course at Seoul National University (Jan 2019)
+              <br>
+
+
+            </td>
+          </tr>
+        </tbody></table>
+
       </td>
     </tr>
   </table>
