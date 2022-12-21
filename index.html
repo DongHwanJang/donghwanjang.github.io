@@ -50,7 +50,9 @@
                 <br>
                 <br>
                 I believe current static neural networks call for the scale-up of their model size to compensate for the lack of adaptability, and make the models hard to be deployed in changing unstructured environments.
+                <br>
                 To address this issue, I am interested in <strong>dynamic neural networks</strong> that can make machines flexibly learn where to focus and evolve accordingly, like human brain.
+                <br>
                 My research interests include computer vision, machine learning, robotics, and neuroscience.
 
               </p>
@@ -60,11 +62,11 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
-          <tr onmouseout="dynopool_stop()" onmouseover="dynopool_start()">
+          <tr onmouseout="dynopool_stop()" onmouseover="dynopool_start()"  bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='dynopool_image'>
-                  <img src='images/dynopool_after.png' width="160"></div>
+                  <img src='images/dynopool_after.gif' width="160"></div>
                 <img src='images/dynopool_before.png' width="160">
               </div>
               <script type="text/javascript">
@@ -97,7 +99,7 @@
           </tr>
 
 
-          <tr onmouseout="ds4c_stop()" onmouseover="ds4c_start()"  bgcolor="#ffffd0">
+          <tr onmouseout="ds4c_stop()" onmouseover="ds4c_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='ds4c_image'>
@@ -148,43 +150,13 @@
         <table width="100%" align="center" border="0" cellpadding="20"><tbody>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          <tr onmouseout="hier_stop()" onmouseover="hier_start()">
-            <td style="padding:20px;width:25%;vertical-align:middle">
-              <div class="one">
-                <div class="two" id='hier_image'>
-                  <img src='images/hier_after.png' width="160"></div>
-                <img src='images/hier_before.png' width="160">
-              </div>
-              <script type="text/javascript">
-                function hier_start() {
-                  document.getElementById('hier_image').style.opacity = "1";
-                }
-
-                function hier_stop() {
-                  document.getElementById('hier_image').style.opacity = "0";
-                }
-                hier_stop()
-              </script>
-            </td>
-            <td style="padding:20px;width:75%;vertical-align:middle">
-
-              <papertitle>Spatially Adaptive Feature Transform for Universal Image Restoration</papertitle>
-
-              <br>
-              <p></p>
-              <p>
-                Spatially-Variant Motion Deblur based on the Implicit Neural Representation
-              </p>
-
-            </td>
-          </tr>
 
           <tr onmouseout="diff_stop()" onmouseover="diff_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='diff_image'>
-                  <img src='images/diff_after.jpg' width="160"></div>
-                <img src='images/diff_before.jpg' width="160">
+                  <img src='images/diff_after.png' width="160"></div>
+                <img src='images/diff_before.png' width="160">
               </div>
               <script type="text/javascript">
                 function diff_start() {
@@ -210,8 +182,41 @@
             </td>
           </tr>
 
+          <tr onmouseout="hier_stop()" onmouseover="hier_start()">
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <div class="one">
+                <div class="two" id='hier_image'>
+                  <img src='images/hier.gif' width="160"></div>
+                <img src='images/hier_3.png' width="160">
+              </div>
+              <script type="text/javascript">
+                function hier_start() {
+                  document.getElementById('hier_image').style.opacity = "1";
+                }
 
-          <tr onmouseout="depthfinder_stop()" onmouseover="depthfinder_start()"  bgcolor="#ffffd0">
+                function hier_stop() {
+                  document.getElementById('hier_image').style.opacity = "0";
+                }
+                hier_stop()
+              </script>
+            </td>
+            <td style="padding:20px;width:75%;vertical-align:middle">
+
+              <papertitle>Dynamic Spatially-Adaptive Modulation for image Dehazing</papertitle>
+
+              <br>
+              <p></p>
+              <p>
+                We propose a novel framework of the dynamic spatially-adaptive modulation for image dehazing.
+                The proposed algorithm introduces a selection module that conditionally determine the necessary modulation pathways in a bottom-up manner by providing a loss function optimizing both accuracy and efficiency.
+              </p>
+
+            </td>
+          </tr>
+
+
+
+          <tr onmouseout="depthfinder_stop()" onmouseover="depthfinder_start()">
             <td style="padding:20px;width:25%;vertical-align:middle">
               <div class="one">
                 <div class="two" id='depthfinder_image'>
@@ -251,11 +256,13 @@
             </td>
           </tr>
         </tbody></table>
-        <table width="100%" align="center" border="0" cellpadding="20"><tbody>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
 
           <tr>
-            <td style="padding:20px;width:25%;vertical-align:middle"><img src="images/kccv.png"></td>
+            <td style="padding:20px;width:25%;vertical-align:middle">
+              <img src="images/kccv.png">
+            </td>
             <td style="padding:20px;width:75%;vertical-align:middle">
               <a href="http://kccv2022.kcvs.kr/#top">Korean Conference on Computer Vision 2022</a>
               <br>
@@ -293,14 +300,14 @@ Field is Suboptimal” presented by prof. Bohyung Han
 
               <br>
               <br>
-              • <strong>OnDream Global Scholarship Award</strong> (2022)
+              • <strong>Hyundai OnDream Global Scholarship Award</strong> (2022)
                 <br>
               &nbsp- Award Prize - around USD 2,350
                <br>
               &nbsp- For the paper “Pooling Revisited: Your Receptive Field is Suboptimal” at CVPR 2022
                <br>
                <br>
-              • <strong>OnDream Future Technology Scholarship</strong> (2021-2022)
+              • <strong>Hyundai OnDream Future Technology Scholarship</strong> (2021-2022)
               <br>
               &nbsp- Covers full tuition & financial support
 
