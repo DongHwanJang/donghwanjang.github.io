@@ -66,6 +66,41 @@
         </tbody></table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+            <tr onmouseout="modelstock_stop()" onmouseover="modelstock_start()"  bgcolor="#ffffd0">
+                <td style="padding:20px;width:25%;vertical-align:middle">
+                    <div class="one">
+                        <div class="two" id='modelstock_image'>
+                            <img src='images/modelstock_after.png' width="160"></div>
+                        <img src='images/modelstock_before.png' width="160">
+                    </div>
+                    <script type="text/javascript">
+                        function modelstock_start() {
+                            document.getElementById('modelstock_image').style.opacity = "1";
+                        }
+            
+                        function modelstock_stop() {
+                            document.getElementById('modelstock_image').style.opacity = "0";
+                        }
+                        modelstock_stop()
+                    </script>
+                </td>
+                <td style="padding:20px;width:75%;vertical-align:middle">
+                    <a href="https://arxiv.org/pdf/YOUR_PAPER_LINK.pdf">
+                        <papertitle>Model Stock: A Novel Approach for Fine-Tuning Pretrained Models</papertitle>
+                    </a> <a href="#">[github]</a>,                    
+                    <br>
+                    <strong>Dong-Hwan Jang</strong>,
+                    <a href="https://sangdooyun.github.io/">Sangdoo Yun</a>,                    
+                    <a href="https://sites.google.com/site/dyhan0920/">Dongyoon Han</a>
+                    <br>
+                    <em>Under Review</em>, 2024
+                    <p></p>
+                    <p>
+                        <em>"Model Stock"</em> revolutionizes fine-tuning for large pre-trained models by combining efficiency with superior accuracy. This method departs from traditional model averaging and employs a strategic layer-wise technique with fewer models. Our approach, focusing on weight space dynamics in fine-tuned models, demonstrates remarkable performance on both ID and OOD tasks with minimal computational overhead. "Model Stock" offers new insights into the pretraining-finetuning paradigm, relevant for academic and industry advancements in AI.
+                    </p>
+                </td>
+            </tr>
+
 
           <tr onmouseout="dynopool_stop()" onmouseover="dynopool_start()"  bgcolor="#ffffd0">
             <td style="padding:20px;width:25%;vertical-align:middle">
