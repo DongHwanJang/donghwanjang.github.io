@@ -92,6 +92,8 @@ strong {
 heading {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
+  display: block;
+  margin-bottom: 0.6em;
 }
 
 papertitle {
@@ -106,18 +108,25 @@ name {
 }
 
 .one {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   position: relative;
 }
 
 .two {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   position: absolute;
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
+}
+
+.one img,
+.two img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .fade {
@@ -129,3 +138,69 @@ name {
 span.highlight {
   background-color: #ffffd0;
 }
+
+/* Layout */
+.page-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.page-container table {
+  width: 100%;
+  border: 0;
+  border-spacing: 0;
+  border-collapse: separate;
+  margin: 0 auto;
+}
+
+.section-block {
+  width: 100%;
+  border: 0;
+  margin: 0 auto;
+}
+
+.section-block td {
+  padding: 20px;
+}
+
+.section-block-first td {
+  padding-top: 8px;
+}
+
+.cell-pad-sm { padding: 2.5%; }
+.cell-63 { width: 63%; vertical-align: middle; }
+.cell-40 { width: 40%; max-width: 40%; padding: 2.5%; }
+.cell-25 { width: 25%; vertical-align: middle; padding: 20px; }
+.cell-75 { width: 75%; vertical-align: middle; padding: 20px; }
+
+.text-center { text-align: center; }
+.row-highlight { background-color: #ffffd0; }
+
+.profile-photo {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Hover image overlay on paper/project rows */
+.paper-row .two { opacity: 0; }
+.paper-row:hover .two { opacity: 1; }
+
+/* News section */
+.news-list { margin: 0; padding-left: 1.2em; list-style: none; }
+.news-list li { margin-bottom: 0.25em; position: relative; }
+.news-list li::before { content: "•"; position: absolute; left: -0.9em; color: #555; }
+.news-date { margin-right: 0.6em; white-space: nowrap; color: #555; }
+.news-list li.news-recent { color: #c41e3a; font-weight: 500; }
+.news-badge { display: inline-block; margin-right: 0.4em; padding: 0.1em 0.5em; font-size: 0.75em; font-weight: 700; color: #fff; background: linear-gradient(135deg, #c41e3a 0%, #9a1830 100%); border-radius: 3px; letter-spacing: 0.02em; box-shadow: 0 1px 2px rgba(0,0,0,0.15); }
+
+/* Scholarship list - title + description for readability */
+.scholarship-list { margin: 0; padding-left: 1.2em; list-style: none; }
+.scholarship-list li { margin-bottom: 0.6em; position: relative; }
+.scholarship-list li::before { content: "•"; position: absolute; left: -0.9em; color: #555; }
+.scholarship-desc { display: block; margin-top: 0.2em; margin-left: 0; color: #555; font-size: 0.95em; line-height: 1.4; }
+
+.edu-date { color: #888; }
