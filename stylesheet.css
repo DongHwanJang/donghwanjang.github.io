@@ -203,4 +203,7 @@ span.highlight {
 .scholarship-list li::before { content: "•"; position: absolute; left: -0.9em; color: #555; }
 .scholarship-desc { display: block; margin-top: 0.2em; margin-left: 0; color: #555; font-size: 0.95em; line-height: 1.4; }
 
-.edu-date { color: #888; }
+.edu-date { color: #555; }
+
+/* Academic Projects - tighter row spacing */
+.academic-projects-table .paper-row td { padding-top: 0px; padding-bottom: 0px; }
