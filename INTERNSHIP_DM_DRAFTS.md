@@ -33,16 +33,24 @@ Your TarFlow line of work is really exciting — I've gone through all four
 papers and I'm especially interested in how STARFlow-V extends the
 invertible structure to video with flow-score matching.
 
-My recent work has relevant overlap:
+My recent work connects in a few ways:
 
-• RewardFlow (CVPR'26): reward-guided image editing via Langevin dynamics
-  on diffusion models — I'm curious whether similar reward-based sampling
-  could improve NF generation quality without retraining
-• Model Stock (ECCV'24 Oral): weight space geometry for efficient
-  fine-tuning (24x cost reduction on CLIP) — the geometric structure of
-  flow-based latent spaces is a natural next question
-• PyraTok (CVPR'26): pyramidal video tokenizer — connects to the
-  tokenization choices in STARFlow-V's latent space design
+• RewardFlow (CVPR'26): I steer pretrained flow-matching models (Flux,
+  Qwen) at inference time via reward-guided Langevin dynamics. I'm curious
+  whether TarFlow's noise augmentation or STARFlow-V's flow-score matching
+  formulation could provide analogous injection points for reward-based
+  guidance in NFs — I see this as an open research question, not a solved
+  one, and would love to explore it.
+• PyraTok (CVPR'26): pyramidal video tokenizer for 4K/8K. I know
+  STARFlow-V needs continuous latent spaces rather than discrete VQ tokens,
+  so the tokenizer itself doesn't port over — but the design principles
+  around temporal hierarchy and spatial scalability would inform how I think
+  about latent space design for video NFs.
+• Model Stock (ECCV'24 Oral): analyzing geometric structure (thin shells,
+  angular concentration) in high-dimensional weight space for efficient
+  fine-tuning (24x cost reduction on CLIP). I'd bring that same geometric
+  analysis toolkit to understanding how NFs structure their learned
+  transformations.
 
 I'd love to contribute to pushing NF further. Happy to send my CV if
 you're interested.
@@ -52,10 +60,12 @@ Homepage: [link] | Scholar: [link]
 
 ### 왜 이렇게 썼는가
 
-1. **논문을 읽었다는 증거** — STARFlow-V의 "flow-score matching"을 구체적으로 언급. 4편 다 읽었다고만 하면 빈말처럼 들림.
-2. **각 논문마다 NF와의 구체적 연결** — "reward-based sampling for NF", "flow-based latent space geometry" 등. 단순 나열이 아니라 아이디어를 던짐.
-3. **DM에 맞는 길이** — Twitter DM은 길면 안 읽힘. CV 첨부 대신 "Happy to send"로 대화를 열어둠.
-4. **"if these excite you"에 대응** — 실제로 excited하다는 걸 구체적으로 보여줌.
+1. **논문을 읽었다는 증거** — STARFlow-V의 "flow-score matching"과 noise augmentation을 구체적으로 언급. TarFlow 시리즈의 기술적 특징을 이해하고 있음을 보여줌.
+2. **RewardFlow를 리드로** — flow-matching backbone 위에서 reward-guided sampling을 실제로 구현한 경험이 NF와 가장 직접적 접점. "open question"으로 프레이밍하여 과장을 피함.
+3. **PyraTok의 한계를 솔직하게 인정** — discrete VQ vs continuous latent의 차이를 스스로 짚음으로써 NF를 이해하고 있다는 시그널. 전이되는 건 "설계 원칙"임을 명확히.
+4. **Model Stock은 transferable skill로** — latent space geometry와의 거짓 연결 대신, "고차원 기하학적 분석 능력"이라는 정직한 프레이밍.
+5. **DM에 맞는 길이** — Twitter DM은 길면 안 읽힘. CV 첨부 대신 "Happy to send"로 대화를 열어둠.
+6. **"if these excite you"에 대응** — 실제로 excited하다는 걸 구체적으로 보여줌.
 
 ---
 
@@ -64,9 +74,9 @@ Homepage: [link] | Scholar: [link]
 **현재:** "3D/4D vision and generative modeling"
 
 **Apple 맞춤 버전:**
-> My research explores efficient and controllable generative modeling — from geometric insights in weight space (Model Stock) to reward-guided generation (RewardFlow) to hierarchical video tokenization (PyraTok). I am particularly interested in likelihood-based generative frameworks and their theoretical advantages for multi-modal generation.
+> My research focuses on controllable and efficient generative modeling — from reward-guided inference-time control of flow-matching models (RewardFlow) to geometric analysis of high-dimensional parameter spaces for efficient adaptation (Model Stock) to multi-scale video representation (PyraTok). I am particularly interested in likelihood-based generative frameworks, where exact density estimation opens doors to principled reward-based steering and theoretical guarantees that approximate methods lack.
 
-**포인트:** "likelihood-based generative frameworks"를 넣으면 NF와의 연결이 자연스러움. Apple은 NF의 exact likelihood 계산을 핵심 selling point로 삼고 있으므로.
+**포인트:** "likelihood-based generative frameworks"를 넣으면 NF와의 연결이 자연스러움. "reward-based steering"이 RewardFlow→NF의 구체적 연구 방향을 암시. "flow-matching models"를 명시하여 TarFlow 계열과의 기술적 접점을 보여줌.
 
 ---
 
@@ -84,20 +94,25 @@ Ismini Lourentzou, PLAN Lab). Your post about the video pretraining
 internship at FAIR caught my attention — both the research direction and
 the "prioritizing research" message resonate with me.
 
-I've been working on video representation and generative modeling:
+I've been thinking about MetaCLIP's metadata-driven curation and how it
+could extend to video. Images have metadata like alt-text and co-occurring
+queries, but video introduces richer dimensions — temporal coherence,
+motion complexity, scene transitions, shot boundaries — that could enable
+more structured curation at scale. I'd be excited to explore what a
+"MetaCLIP for video" pipeline looks like, especially as video pretraining
+data grows to Internet scale.
 
-• PyraTok (CVPR'26): language-aligned pyramidal tokenizer for 4K/8K video.
-  We found that how you tokenize video matters as much as the model itself
-  — which aligns with your data-centric philosophy from MetaCLIP.
-• RewardFlow (CVPR'26): reward-guided image editing via Langevin dynamics
-  — controllable generation without model retraining.
-• Model Stock (ECCV'24 Oral): efficient fine-tuning through weight space
-  geometry (24x cost reduction on CLIP) — could be interesting for
-  adapting large pretrained video models.
+My recent work is relevant here:
 
-I've read MetaCLIP and I think the metadata-driven curation idea has
-a natural extension to video — temporal structure and motion provide
-rich metadata signals that images simply don't have.
+• PyraTok (CVPR'26): a pyramidal video tokenizer that captures multi-scale
+  spatiotemporal features. The multi-scale representations could serve as
+  metadata features for video curation — measuring visual complexity and
+  temporal structure at different granularities.
+• Model Stock (ECCV'24 Oral): weight space geometry for efficient
+  fine-tuning (24x cost reduction on CLIP). I'm curious whether similar
+  geometric structure exists in video foundation models, and whether this
+  could reduce the cost of adapting pretrained video representations to
+  downstream tasks.
 
 Would love to discuss how I might contribute to the video pretraining
 effort.
@@ -107,10 +122,12 @@ Homepage: [link] | Scholar: [link]
 
 ### 왜 이렇게 썼는가
 
-1. **"prioritizing research" 콜백** — 공고의 핵심 메시지를 에코하여 "나는 당신이 찾는 바로 그 타입"임을 암시.
-2. **MetaCLIP에 대한 실제 의견 제시** — "temporal structure as metadata"라는 concrete idea를 던짐. 읽기만 한 게 아니라 생각했음을 보여줌.
-3. **PyraTok을 data-centric 관점으로 프레이밍** — Hu Xu의 연구 철학("data > architecture")과 연결. "토큰화 방식이 모델만큼 중요하다"는 주장이 MetaCLIP의 핵심 논지와 일맥상통.
-4. **LinkedIn DM 적정 길이** — Twitter보다는 길어도 되지만, 스크롤 없이 읽을 수 있는 분량.
+1. **MetaCLIP → video 확장 아이디어를 중심축으로** — Hu Xu의 대표 연구에 대한 구체적 확장 아이디어를 제시. "temporal coherence, motion complexity, scene transitions" 등 video-specific metadata를 열거하여 단순 "비디오에 적용 가능" 이상의 사고를 보여줌.
+2. **"prioritizing research" 콜백** — 공고의 핵심 메시지를 에코.
+3. **PyraTok을 metadata feature provider로 재연결** — "data-centric 철학 공유"라는 억지 대신, multi-scale representation이 curation의 feature로 쓰일 수 있다는 구체적 역할 제시.
+4. **Model Stock은 구체적 질문으로** — "could be interesting" 대신 "geometric structure가 video FM에도 존재하는가?"라는 testable question으로 전환.
+5. **RewardFlow는 삭제** — Pretraining 팀에게 inference-time image editing은 약한 카드. 무리하게 넣기보다 강한 2개에 집중.
+6. **LinkedIn DM 적정 길이** — 스크롤 없이 읽을 수 있는 분량 유지.
 
 ---
 
@@ -119,9 +136,9 @@ Homepage: [link] | Scholar: [link]
 **현재:** "3D/4D vision and generative modeling"
 
 **FAIR 맞춤 버전:**
-> My research investigates how data representation and model efficiency interact in vision-language learning — from video tokenization (PyraTok) to weight space geometry for efficient adaptation (Model Stock) to reward-guided generation (RewardFlow). I am interested in scalable video pretraining and data-centric approaches to multi-modal learning.
+> My research investigates how upstream representation choices affect vision-language learning at scale — from multi-scale video tokenization (PyraTok) to geometric analysis of fine-tuned weight spaces for efficient adaptation (Model Stock). I am interested in data-centric approaches to video pretraining: how curation strategy, tokenization design, and training recipes interact to determine what large video models actually learn.
 
-**포인트:** "data representation", "data-centric", "scalable video pretraining"이 Hu Xu의 언어. FAIR/Meta는 "scale"과 "data"를 가장 중시.
+**포인트:** "data-centric", "curation strategy", "video pretraining"이 Hu Xu의 언어. "upstream representation choices"로 tokenization과 curation을 자연스럽게 아우름. RewardFlow를 빼고 강한 2개에 집중.
 
 ---
 
@@ -138,26 +155,26 @@ Hi Dr. Liu, I'm Dong-Hwan Jang, a first-year CS PhD student at UIUC,
 advised by Prof. Ismini Lourentzou (PLAN Lab — Perception and Language).
 
 I saw your post about the Summer 2026 Student Researcher positions on
-VLM/MLLM applications and wanted to reach out — my research background
-aligns with the three directions you listed:
+VLM/MLLM applications. I'm most excited about the vision skills
+development direction — particularly the SFT→RL pipeline for teaching
+VLMs new visual capabilities.
 
-Fine-grained vision reasoning:
-  PyraTok (CVPR'26) is a language-aligned pyramidal video tokenizer that
-  preserves fine-grained visual detail across spatiotemporal scales. The
-  multi-scale representation is designed to retain precisely the kind of
-  subtle visual information that current VLMs tend to miss.
+In RewardFlow (CVPR'26), I designed composable differentiable reward
+functions that decompose complex visual quality into measurable
+sub-objectives: a VQA-based reward for semantic accuracy, a SAM-guided
+reward for spatial precision, and perceptual/CLIP alignment signals. The
+optimization mechanism differs from RL policy training (RewardFlow steers
+sampling at inference time via Langevin dynamics), but the core challenge
+— defining what "good visual output" means as a learnable, differentiable
+signal — is shared with the RL reward design bottleneck in vision skills
+development. I'd be eager to bring this reward engineering experience to
+the SFT→RL setting.
 
-Vision skills development:
-  RewardFlow (CVPR'26) uses reward-guided Langevin dynamics for
-  controllable image editing — the SFT→RL pipeline you mention for
-  teaching new vision skills connects directly to this reward-based
-  approach.
-
-MLLM capability auditing:
-  Model Stock (ECCV'24 Oral) analyzes weight space geometry for efficient
-  VLM adaptation, validated on CLIP with 24x cost reduction. Understanding
-  how fine-tuning affects model capabilities is a step toward systematic
-  capability profiling.
+I also bring relevant VLM experience: Model Stock (ECCV'24 Oral)
+validated efficient fine-tuning through weight space geometry on CLIP
+(24x cost reduction), and PyraTok (CVPR'26) gave me hands-on experience
+with multi-scale visual representation design — understanding what visual
+information gets preserved or lost during tokenization.
 
 My advisor's PLAN Lab works on vision-language models with limited
 supervision (recent work includes multi-image VLM reasoning), so VLM
@@ -171,10 +188,11 @@ Homepage: [link] | Scholar: [link]
 
 ### 왜 이렇게 썼는가
 
-1. **공고의 3가지 방향에 1:1 매핑** — 가장 formal한 공고이므로, 구조적으로 대응. "당신이 원하는 것 = 내가 하는 것"을 명확히.
-2. **Lourentzou의 PLAN Lab을 강조** — "Perception and Language"라는 풀네임이 VLM 연구 환경에서 훈련받고 있음을 직접 보여줌. 다른 포지션에 없는 핵심 차별화.
-3. **SRP 공식 지원 언급** — 공고가 공식 링크를 제공했으므로, 양쪽 채널 모두 활용하고 있음을 보여줌.
-4. **각 논문의 VLM 연결을 구체적으로** — PyraTok은 "subtle visual information VLMs miss"로, RewardFlow는 "SFT→RL pipeline"으로, Model Stock은 "capability profiling"으로 각각 연결.
+1. **1개 방향에 집중** — 3가지 모두에 억지로 매핑하기보다, 가장 강한 연결인 "Vision skills development"에 집중. 나머지는 supporting background로.
+2. **RewardFlow의 전이 가능 skill을 정직하게** — "optimization mechanism은 다르다"고 인정하면서, "differentiable reward 설계"라는 핵심 기술의 전이를 구체적으로 설명. VQA, SAM, CLIP 등 실제 reward 구성요소를 열거하여 깊이를 보여줌.
+3. **Model Stock과 PyraTok은 "relevant VLM experience"로** — capability auditing과의 억지 연결 대신, CLIP 기반 실전 경험과 visual representation 설계 경험이라는 사실만 전달.
+4. **Lourentzou의 PLAN Lab을 강조** — VLM 연구 환경에서 훈련받고 있음을 직접 보여줌.
+5. **SRP 공식 지원 언급** — 양쪽 채널 모두 활용하고 있음을 보여줌.
 
 ---
 
@@ -183,9 +201,9 @@ Homepage: [link] | Scholar: [link]
 **현재:** "3D/4D vision and generative modeling"
 
 **Google 맞춤 버전:**
-> My research focuses on building efficient and capable vision-language models — from multi-scale visual tokenization (PyraTok) to reward-guided generation (RewardFlow) to understanding weight space geometry for VLM adaptation (Model Stock, validated on CLIP). I am particularly interested in improving fine-grained visual reasoning in multimodal LLMs and systematic evaluation of their capabilities.
+> My research focuses on vision-language model components and alignment — from designing composable differentiable rewards for visual quality (RewardFlow) to efficient VLM adaptation validated on CLIP (Model Stock) to multi-scale visual representation (PyraTok). I am particularly interested in teaching VLMs new visual capabilities through reward-based learning, and in understanding what visual information current tokenization pipelines lose.
 
-**포인트:** "vision-language models"가 첫 키워드. "fine-grained visual reasoning"과 "systematic evaluation"이 공고의 3가지 방향 중 2가지를 직접 반영. 이 버전이 4개 중 **가장 동환님의 실제 연구 방향과도 잘 맞을 것**.
+**포인트:** "teaching VLMs new visual capabilities through reward-based learning"이 Vision skills development + SFT→RL 방향과 직접 연결. "composable differentiable rewards"로 RewardFlow의 구체적 기여를 어필. "what visual information tokenization pipelines lose"로 fine-grained reasoning과 자연스럽게 연결.
 
 ---
 
@@ -206,27 +224,29 @@ I am a first-year CS PhD student at UIUC, advised by Prof. Ismini
 Lourentzou (PLAN Lab). I am writing about the Summer 2026 research
 intern position on open-world navigation at Amazon FAR.
 
-While my primary background is in vision-language models rather than
-robotics, I believe the multi-modal foundation model angle of your work
-connects to my research:
+My primary background is in vision-language models rather than robotics,
+but I believe I can bring a foundation model perspective that complements
+your team's embodied AI expertise — particularly around efficient
+adaptation and video representation.
 
-• PyraTok (CVPR'26): a language-aligned pyramidal video tokenizer that
-  captures multi-scale spatiotemporal features. The hierarchical
-  representation could benefit egocentric video understanding for
-  navigation — encoding near/far spatial information at different
-  resolutions.
+• Model Stock (ECCV'24 Oral): I studied the geometric structure of
+  fine-tuned weight spaces and showed that only 2 checkpoints are needed
+  to approximate the optimal weight average (24x cost reduction on CLIP).
+  For a team adapting large pretrained VLMs to new navigation domains with
+  limited robot data, this kind of efficient adaptation could reduce the
+  number of fine-tuning runs needed.
 
-• Model Stock (ECCV'24 Oral): efficient VLM adaptation through weight
-  space geometry (24x cost reduction on CLIP). Deploying large foundation
-  models on compute-constrained robot platforms is a natural application.
+• PyraTok (CVPR'26): a pyramidal video tokenizer that captures multi-scale
+  spatiotemporal features. Video tokenization is an active bottleneck in
+  VLA architectures (cf. FAST, VQ-VLA), and our multi-scale approach
+  could inform how egocentric video is efficiently encoded for action
+  models.
 
-• RewardFlow (CVPR'26): reward-guided image editing via Langevin
-  dynamics. The reward-based optimization framework connects to
-  language-guided reward design for navigation policies (cf. ReWiND).
-
-I am particularly interested in how efficient video representation and
-foundation model adaptation techniques can improve navigation agents in
-the open-world setting.
+I have read CityWalker and ReWiND — the idea of learning navigation from
+Internet-scale video and using language-guided reward signals for policy
+training is compelling. I am curious how foundation model adaptation and
+video representation techniques from the VLM side could contribute to
+this pipeline.
 
 Maximum availability: [Summer 2026 dates — 채우기]
 
@@ -239,11 +259,12 @@ Dong-Hwan Jang
 
 ### 왜 이렇게 썼는가
 
-1. **솔직한 포지셔닝** — "my primary background is in VLM rather than robotics"를 먼저 인정. 숨기면 오히려 불리. 솔직함 + "but here's how it connects"가 더 설득력 있음.
-2. **5가지 관심 분야 중 "multi-modal foundation models"에 집중** — Robotics나 neural rendering 경험이 없으므로, 동환님이 가장 강한 앵글로만 공략.
-3. **공고 형식 준수** — 제목, CV 첨부, availability 모두 공고 지시 그대로. 이건 기본이지만 지키는 사람이 의외로 적음.
-4. **ReWiND 레퍼런스** — 그들의 분야 논문을 알고 있다는 시그널. "이 사람이 우리 분야를 조사했구나."
-5. **이메일 톤** — DM보다 formal. "Dear", "Best regards" 사용.
+1. **솔직한 포지셔닝 유지** — "primary background is VLM not robotics"를 인정하되, "foundation model perspective that complements your embodied AI expertise"로 가치를 제시.
+2. **연결 수를 3→2로 축소, 각각 더 정직하게** — RewardFlow→navigation rewards 연결은 surface-level analogy였으므로 삭제. 남은 2개에 집중.
+3. **Model Stock의 training/inference 혼동 수정** — "compute-constrained robot deployment" 대신 "limited robot data로 VLM을 새 도메인에 적응"이라는 정확한 use case로 전환.
+4. **PyraTok의 "near/far" 해석 삭제** — 논문에 없는 spatial-depth 개념 대신, VLA video tokenization bottleneck이라는 실제 분야 문제와 연결.
+5. **CityWalker + ReWiND 레퍼런스** — 팀의 논문을 읽었다는 시그널. 하지만 "connects to my work"가 아니라 "I'm curious how my skills could contribute"로 겸손하게.
+6. **공고 형식 준수** — 제목, CV 첨부, availability 모두 공고 지시 그대로.
 
 ---
 
@@ -252,9 +273,9 @@ Dong-Hwan Jang
 **현재:** "3D/4D vision and generative modeling"
 
 **Amazon FAR 맞춤 버전:**
-> My research develops efficient vision-language model components — multi-scale video tokenization (PyraTok), reward-guided generation (RewardFlow), and geometric approaches to model adaptation (Model Stock). I am interested in applying foundation model techniques to embodied AI, particularly efficient visual representation and reward-based learning for real-world agents.
+> My research develops efficient vision-language model components — multi-scale video tokenization (PyraTok) and geometric approaches to efficient model adaptation with limited data (Model Stock, validated on CLIP). I am interested in how these VLM techniques transfer to embodied settings, particularly efficient visual representation for action models and adapting foundation models to new domains with scarce robot data.
 
-**포인트:** "embodied AI", "real-world agents"를 넣되 과장하지 않음. "applying foundation model techniques to"로 전이 의도를 명확히.
+**포인트:** "embodied AI"를 넣되 과장하지 않음. "transfer to embodied settings"로 VLM→robotics 전이 의도를 솔직히. "scarce robot data"가 FAR 팀의 실제 pain point. RewardFlow는 이 맥락에서 억지이므로 제외.
 
 ---
 
@@ -262,9 +283,9 @@ Dong-Hwan Jang
 
 ## 옵션 1: 범용 버전 (1개만 쓸 경우)
 
-> My research focuses on efficient and controllable vision-language models — from weight space geometry for model adaptation (Model Stock) to reward-guided generation (RewardFlow) to multi-scale video tokenization (PyraTok). I am interested in how these techniques can improve multimodal understanding, generation, and reasoning.
+> My research focuses on vision-language model components and controllable generation — from designing differentiable reward functions for visual quality (RewardFlow) to geometric analysis of weight spaces for efficient VLM adaptation (Model Stock) to multi-scale video tokenization (PyraTok). I am interested in how these techniques can improve multimodal understanding, generation, and reasoning.
 
-**장점:** Google, FAIR, Apple 모두에 통하는 중립적 버전.
+**장점:** Google, FAIR, Apple 모두에 통하는 중립적 버전. "differentiable reward functions"가 구체적 기여를 보여줌.
 **단점:** 어디에도 완벽하지 않음.
 
 ## 옵션 2: 포지션별 맞춤 (추천)
@@ -273,10 +294,10 @@ CV를 4벌 준비할 필요는 없지만, Research Interest 한 문장만 바꿔
 
 | 포지션 | 핵심 키워드 삽입 |
 |--------|-----------------|
-| Apple MLR | "likelihood-based generative frameworks", "theoretical advantages" |
-| FAIR/Meta | "scalable video pretraining", "data-centric approaches" |
-| Google Research | "fine-grained visual reasoning in multimodal LLMs", "systematic evaluation" |
-| Amazon FAR | "foundation model techniques for embodied AI", "real-world agents" |
+| Apple MLR | "reward-based steering of flow-matching models", "likelihood-based generative frameworks" |
+| FAIR/Meta | "data-centric approaches to video pretraining", "curation strategy" |
+| Google Research | "teaching VLMs new visual capabilities through reward-based learning" |
+| Amazon FAR | "efficient VLM adaptation with limited data", "transfer to embodied settings" |
 
 ## 공통으로 반드시 빼야 할 것
 
