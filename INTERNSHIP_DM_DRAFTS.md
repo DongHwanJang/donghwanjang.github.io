@@ -220,29 +220,36 @@ I am a first-year CS PhD student at UIUC, advised by Prof. Ismini
 Lourentzou (PLAN Lab). I am writing about the Summer 2026 research
 intern position on open-world navigation at Amazon FAR.
 
-My primary background is in vision-language models rather than robotics,
-but I believe I can bring a foundation model perspective that complements
-your team's embodied AI expertise — particularly around efficient
-adaptation and video representation.
+I am actively steering my PhD toward the intersection of 3D spatial
+understanding and embodied reasoning. My current view is that robust
+navigation will require VLAs for behavior planning and world action models (video generation-
+based) for motion planning — and that both need a grounded
+understanding of 3D space that is still largely missing from current
+approaches. I am preparing a NeurIPS submission on maintaining 3D
+consistency in video generation, which sits at this intersection.
 
-• Model Stock (ECCV'24 Oral): I studied the geometric structure of
-  fine-tuned weight spaces and showed that only 2 checkpoints are needed
-  to approximate the optimal weight average (24x cost reduction on CLIP).
-  For a team adapting large pretrained VLMs to new navigation domains with
-  limited robot data, this kind of efficient adaptation could reduce the
-  number of fine-tuning runs needed.
+This is why your posting on open-world navigation excites me: OOD task
+execution in open environments is exactly where 3D reasoning + planning
+becomes essential, not optional. I would love to explore how 3D spatial
+understanding can be integrated into the foundation model stack for
+navigation — bridging the gap between visual world models and physical
+reality.
 
-• PyraTok (CVPR'26): a pyramidal video tokenizer that captures multi-scale
-  spatiotemporal features. Video tokenization is an active bottleneck in
-  VLA architectures (cf. FAST, VQ-VLA), and our multi-scale approach
-  could inform how egocentric video is efficiently encoded for action
-  models.
+My published work, while not directly in robotics, builds relevant
+foundations:
 
-I have read CityWalker and ReWiND — the idea of learning navigation from
-Internet-scale video and using language-guided reward signals for policy
-training is compelling. I am curious how foundation model adaptation and
-video representation techniques from the VLM side could contribute to
-this pipeline.
+• RewardFlow (CVPR'26): reward-guided generation via Langevin dynamics
+  on flow-matching models — experience designing differentiable reward
+  functions and steering generative processes toward desired outcomes.
+• Model Stock (ECCV'24 Oral): weight space geometry for efficient
+  fine-tuning (24x cost reduction compared to previous method on CLIP)
+  — adapting large pretrained models with minimal training costs.
+• PyraTok (CVPR'26): multi-scale video tokenization for 4K/8K — how to
+  efficiently represent spatiotemporal information at scale.
+
+I have read CityWalker and ReWiND — the combination of Internet-scale
+video for training and language-guided reward for policy learning aligns
+with the direction I want to pursue.
 
 Maximum availability: [Summer 2026 dates — 채우기]
 
@@ -255,12 +262,12 @@ Dong-Hwan Jang
 
 ### 왜 이렇게 썼는가
 
-1. **솔직한 포지셔닝 유지** — "primary background is VLM not robotics"를 인정하되, "foundation model perspective that complements your embodied AI expertise"로 가치를 제시.
-2. **연결 수를 3→2로 축소, 각각 더 정직하게** — RewardFlow→navigation rewards 연결은 surface-level analogy였으므로 삭제. 남은 2개에 집중.
-3. **Model Stock의 training/inference 혼동 수정** — "compute-constrained robot deployment" 대신 "limited robot data로 VLM을 새 도메인에 적응"이라는 정확한 use case로 전환.
-4. **PyraTok의 "near/far" 해석 삭제** — 논문에 없는 spatial-depth 개념 대신, VLA video tokenization bottleneck이라는 실제 분야 문제와 연결.
-5. **CityWalker + ReWiND 레퍼런스** — 팀의 논문을 읽었다는 시그널. 하지만 "connects to my work"가 아니라 "I'm curious how my skills could contribute"로 겸손하게.
-6. **공고 형식 준수** — 제목, CV 첨부, availability 모두 공고 지시 그대로.
+1. **PhD thesis 방향으로 포지셔닝** — "VLM 사람이 robotics에 연결점을 찾는다"가 아니라, "PhD 방향 자체가 3D spatial understanding + embodied reasoning이고, 이 인턴이 그 궤적 위에 있다"로 전환.
+2. **연구 비전을 먼저 제시** — VLA(behavior planning) + world model(motion planning) + 3D understanding이라는 구체적 프레임워크를 보여줌. 단순 "관심 있다"가 아니라 "어떤 구조로 문제를 보는지"를 보여줌.
+3. **NeurIPS 준비 중인 연구 언급** — 3D consistency in video generation. "이미 이 방향으로 움직이고 있다"는 증거.
+4. **논문들은 "relevant foundations"으로 솔직하게** — "directly in robotics가 아니다"를 인정하되, 각 논문이 기여하는 기반 역량을 간결하게.
+5. **open-world navigation의 핵심 과제와 연결** — OOD task execution에서 3D reasoning이 왜 essential한지를 짚음.
+6. **CityWalker + ReWiND 유지** — 팀 논문을 읽었다는 시그널 + 자신의 방향과 align된다는 구체적 이유.
 
 ---
 
@@ -269,9 +276,9 @@ Dong-Hwan Jang
 **현재:** "3D/4D vision and generative modeling"
 
 **Amazon FAR 맞춤 버전:**
-> My research develops efficient vision-language model components — multi-scale video tokenization (PyraTok) and geometric approaches to efficient model adaptation with limited data (Model Stock, validated on CLIP). I am interested in how these VLM techniques transfer to embodied settings, particularly efficient visual representation for action models and adapting foundation models to new domains with scarce robot data.
+> My research aims to bridge 3D spatial understanding and embodied reasoning through generative modeling. I work on reward-guided generation (RewardFlow), efficient model adaptation (Model Stock), and multi-scale video representation (PyraTok), and am currently extending this to 3D-consistent video generation. I am interested in how grounded 3D reasoning can improve navigation and planning in open-world environments — combining VLAs for behavior planning with world action models (video generation-based) for motion planning.
 
-**포인트:** "embodied AI"를 넣되 과장하지 않음. "transfer to embodied settings"로 VLM→robotics 전이 의도를 솔직히. "scarce robot data"가 FAR 팀의 실제 pain point. RewardFlow는 이 맥락에서 억지이므로 제외.
+**포인트:** "3D spatial understanding + embodied reasoning"이 thesis 방향과 일치. "3D-consistent video generation"으로 NeurIPS 진행 중인 연구를 암시. "open-world environments"가 공고의 핵심 키워드.
 
 ---
 
@@ -293,7 +300,7 @@ CV를 4벌 준비할 필요는 없지만, Research Interest 한 문장만 바꿔
 | Apple MLR | "reward-based steering of flow-matching models", "likelihood-based generative frameworks" |
 | FAIR/Meta | "data-centric approaches to video pretraining", "curation strategy" |
 | Google Research | "teaching VLMs new visual capabilities through reward-based learning" |
-| Amazon FAR | "efficient VLM adaptation with limited data", "transfer to embodied settings" |
+| Amazon FAR | "3D spatial understanding + embodied reasoning", "VLA + world model for navigation" |
 
 ## 공통으로 반드시 빼야 할 것
 
