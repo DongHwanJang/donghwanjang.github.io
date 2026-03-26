@@ -55,7 +55,7 @@ My recent work connects in a few ways:
 I'd love to contribute to pushing NF further. Happy to send my CV if
 you're interested.
 
-Homepage: [link] | Scholar: [link]
+Homepage: https://donghwanjang.github.io | Scholar: https://scholar.google.com/citations?user=5MLvB1YAAAAJ&hl=en
 ```
 
 ### 왜 이렇게 썼는가
@@ -117,7 +117,7 @@ My recent work is relevant here:
 Would love to discuss how I might contribute to the video pretraining
 effort.
 
-Homepage: [link] | Scholar: [link]
+Homepage: https://donghwanjang.github.io | Scholar: https://scholar.google.com/citations?user=5MLvB1YAAAAJ&hl=en
 ```
 
 ### 왜 이렇게 썼는가
@@ -179,7 +179,7 @@ SRP link.
 
 Would be happy to discuss further.
 
-Homepage: [link] | Scholar: [link]
+Homepage: https://donghwanjang.github.io | Scholar: https://scholar.google.com/citations?user=5MLvB1YAAAAJ&hl=en
 ```
 
 ### 왜 이렇게 썼는가
@@ -253,7 +253,7 @@ with the direction I want to pursue.
 
 Maximum availability: [Summer 2026 dates — 채우기]
 
-Homepage: [link]
+Homepage: https://donghwanjang.github.io
 CV: [attached]
 
 Best regards,
