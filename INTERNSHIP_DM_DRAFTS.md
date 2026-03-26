@@ -155,31 +155,27 @@ Hi Dr. Liu, I'm Dong-Hwan Jang, a first-year CS PhD student at UIUC,
 advised by Prof. Ismini Lourentzou (PLAN Lab — Perception and Language).
 
 I saw your post about the Summer 2026 Student Researcher positions on
-VLM/MLLM applications. I'm most excited about the vision skills
-development direction — particularly the SFT→RL pipeline for teaching
-VLMs new visual capabilities.
+VLM/MLLM applications and wanted to reach out. Among the three
+directions you listed, I'm most drawn to vision skills development.
 
 In RewardFlow (CVPR'26), I designed composable differentiable reward
-functions that decompose complex visual quality into measurable
-sub-objectives: a VQA-based reward for semantic accuracy, a SAM-guided
-reward for spatial precision, and perceptual/CLIP alignment signals. The
-optimization mechanism differs from RL policy training (RewardFlow steers
-sampling at inference time via Langevin dynamics), but the core challenge
-— defining what "good visual output" means as a learnable, differentiable
-signal — is shared with the RL reward design bottleneck in vision skills
-development. I'd be eager to bring this reward engineering experience to
-the SFT→RL setting.
+functions that decompose visual quality into measurable sub-objectives:
+a VQA-based reward for semantic accuracy, a SAM-guided reward for
+spatial precision, and perceptual/CLIP alignment signals. RewardFlow
+itself is an inference-time method (steering sampling via Langevin
+dynamics, no model training), but the experience of defining what
+"good visual output" means as a differentiable signal feels directly
+relevant to designing reward functions for teaching VLMs new skills.
 
-I also bring relevant VLM experience: Model Stock (ECCV'24 Oral)
-validated efficient fine-tuning through weight space geometry on CLIP
-(24x cost reduction), and PyraTok (CVPR'26) gave me hands-on experience
-with multi-scale visual representation design — understanding what visual
-information gets preserved or lost during tokenization.
+I also bring VLM-adjacent experience: Model Stock (ECCV'24 Oral) studied
+weight space geometry for efficient fine-tuning on CLIP (24x cost
+reduction), and PyraTok (CVPR'26) gave me hands-on experience with
+multi-scale visual representation — how tokenization choices affect what
+visual information a model can access.
 
-My advisor's PLAN Lab works on vision-language models with limited
-supervision (recent work includes multi-image VLM reasoning), so VLM
-research is central to my PhD trajectory. I've also applied through the
-official SRP link.
+My advisor's PLAN Lab focuses on vision-language research, so VLM is
+central to my PhD trajectory. I've also applied through the official
+SRP link.
 
 Would be happy to discuss further.
 
