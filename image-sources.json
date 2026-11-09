@@ -1,0 +1,62 @@
+[
+  {
+    "source": "images/RewardFlow_before.png",
+    "thumbnail": "images/web/RewardFlow_before.webp"
+  },
+  {
+    "source": "images/RewardFlow_after.png",
+    "thumbnail": "images/web/RewardFlow_after.webp"
+  },
+  {
+    "source": "images/PyraTok_before.png",
+    "thumbnail": "images/web/PyraTok_before.webp"
+  },
+  {
+    "source": "images/PyraTok_after.png",
+    "thumbnail": "images/web/PyraTok_after.webp"
+  },
+  {
+    "source": "images/modelstock_before.png",
+    "thumbnail": "images/web/modelstock_before.webp"
+  },
+  {
+    "source": "images/modelstock_after.png",
+    "thumbnail": "images/web/modelstock_after.webp"
+  },
+  {
+    "source": "images/mb_before.png",
+    "thumbnail": "images/web/mb_before.webp"
+  },
+  {
+    "source": "images/mb_after.png",
+    "thumbnail": "images/web/mb_after.webp"
+  },
+  {
+    "source": "images/dynopool_before.png",
+    "thumbnail": "images/web/dynopool_before.webp"
+  },
+  {
+    "source": "images/dataset-cover.png",
+    "thumbnail": "images/web/dataset-cover.webp"
+  },
+  {
+    "source": "images/diff_before.png",
+    "thumbnail": "images/web/diff_before.webp"
+  },
+  {
+    "source": "images/diff_after.png",
+    "thumbnail": "images/web/diff_after.webp"
+  },
+  {
+    "source": "images/hier_3.png",
+    "thumbnail": "images/web/hier_3.webp"
+  },
+  {
+    "source": "images/depthfinder.png",
+    "thumbnail": "images/web/depthfinder.webp"
+  },
+  {
+    "source": "images/ny_jdh_photo.png",
+    "thumbnail": "images/web/ny_jdh_photo.webp"
+  }
+]
