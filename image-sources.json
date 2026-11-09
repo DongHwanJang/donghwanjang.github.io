@@ -52,8 +52,9 @@
     "thumbnail": "images/web/hier_3.webp"
   },
   {
-    "source": "images/depthfinder.png",
-    "thumbnail": "images/web/depthfinder.webp"
+    "source": "images/depthfinder-concept.svg",
+    "thumbnail": "images/depthfinder-concept.svg",
+    "description": "Description-based concept diagram; example block counts, not measured results or a verified implementation diagram."
   },
   {
     "source": "images/ny_jdh_photo.png",
